@@ -21,7 +21,6 @@
     "paths": {
       "@config/*": ["config/*"],
       "@src/*": ["src/*"],
-      "@key/*": ["key/*"],
     }
   },
 }
