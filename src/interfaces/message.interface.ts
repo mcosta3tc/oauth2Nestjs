@@ -1,4 +1,4 @@
-export interface ReturnMessage {
+export interface ReturnMessageInterface {
   id: string;
   message: string;
 }

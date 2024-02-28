@@ -1,10 +1,10 @@
 import { readFileSync } from 'fs';
-import { Config } from '@config/app/config.interface';
+import { ConfigInterface } from '@config/app/config.interface';
 import { join } from 'path';
 import * as process from 'process';
 import { defineConfig, LoadStrategy } from '@mikro-orm/postgresql';
 
-export function appConfig(): Config {
+export function appConfig(): ConfigInterface {
   const publicKey = readFileSync(
     join(__dirname, '..', '..', '..', 'keys/public.key'),
     'utf-8',

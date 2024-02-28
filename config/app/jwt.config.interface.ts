@@ -1,17 +1,17 @@
-export interface BaseJwt {
+export interface JwtInterface {
   secret: string;
   time: number;
 }
 
-export interface AccessJwtToken {
+export interface AccessJwtTokenInterface {
   publicKey: string;
   privateKey: string;
   time: number;
 }
 
-export interface JwtToken {
-  access: AccessJwtToken;
-  confirmation: BaseJwt;
-  resetPassword: BaseJwt;
-  refresh: BaseJwt;
+export interface JwtTokensInterfaces {
+  access: AccessJwtTokenInterface;
+  confirmation: JwtInterface;
+  resetPassword: JwtInterface;
+  refresh: JwtInterface;
 }

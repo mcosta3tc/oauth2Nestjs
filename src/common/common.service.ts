@@ -12,7 +12,7 @@ import { validate } from 'class-validator';
 import { isNull, isUndefined } from '@common/utils/validation.utils';
 import slugify from 'slugify';
 import { v4 } from 'uuid';
-import { ReturnMessage } from '@interfaces/message.interface';
+import { ReturnMessageInterface } from '@interfaces/message.interface';
 
 @Injectable()
 export class CommonService {
@@ -137,7 +137,6 @@ export class CommonService {
    *
    * Takes a string and generates a slug with dtos as word separators
    */
-
   generatePointSlug(string: string) {
     return slugify(string, {
       lower: true,
@@ -146,7 +145,7 @@ export class CommonService {
     });
   }
 
-  generateMessage(message: string): ReturnMessage {
+  generateMessage(message: string): ReturnMessageInterface {
     return { id: v4(), message };
   }
 }

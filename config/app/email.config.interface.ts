@@ -1,11 +1,11 @@
-interface EmailAuth {
+interface EmailAuthInterface {
   user: string;
   pass: string;
 }
 
-export interface EmailConfig {
+export interface EmailConfigInterface {
   /*  host: string;
   port: number;*/
   secure: boolean;
-  auth: EmailAuth;
+  auth: EmailAuthInterface;
 }

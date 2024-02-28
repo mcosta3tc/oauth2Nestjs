@@ -1,4 +1,6 @@
-export interface User {
+import { CredentialsInterface } from '@interfaces/credentials.interface';
+
+export interface UserInterface {
   id: number;
   name: string;
   username: string;
@@ -7,4 +9,5 @@ export interface User {
   confirmed: boolean;
   createdAt: Date;
   updatedAt: Date;
+  credentials: CredentialsInterface;
 }
