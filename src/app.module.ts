@@ -6,6 +6,7 @@ import { appConfig } from '@config/app';
 import { validationSchema } from '@config/app/config.schema';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { MikroOrmConfig } from '@config/orm/mikro.config';
+import { CommonModule } from '@common/common.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { MikroOrmConfig } from '@config/orm/mikro.config';
       imports: [ConfigModule],
       useClass: MikroOrmConfig,
     }),
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],

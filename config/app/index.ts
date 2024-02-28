@@ -6,11 +6,11 @@ import { defineConfig, LoadStrategy } from '@mikro-orm/postgresql';
 
 export function appConfig(): Config {
   const publicKey = readFileSync(
-    join(__dirname, '..', 'keys/public.key'),
+    join(__dirname, '..', '..', '..', 'keys/public.key'),
     'utf-8',
   );
   const privateKey = readFileSync(
-    join(__dirname, '..', 'keys/private.key'),
+    join(__dirname, '..', '..', '..', 'keys/private.key'),
     'utf-8',
   );
 
@@ -38,8 +38,9 @@ export function appConfig(): Config {
       },
     },
     emailService: {
+      /*
       host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT, 10),
+      port: parseInt(process.env.EMAIL_PORT, 10),*/
       secure: process.env.EMAIL_SECURE === 'true',
       auth: {
         user: process.env.EMAIL_USER,

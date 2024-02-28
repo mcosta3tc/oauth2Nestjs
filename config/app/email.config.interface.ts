@@ -4,8 +4,8 @@ interface EmailAuth {
 }
 
 export interface EmailConfig {
-  host: string;
-  port: number;
+  /*  host: string;
+  port: number;*/
   secure: boolean;
   auth: EmailAuth;
 }
